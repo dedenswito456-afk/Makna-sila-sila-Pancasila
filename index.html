@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Makna 5 Sila Pancasila - Kelas VII SMP</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font (Inter & Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti for Quiz Victory -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pancasila-red': '#DC2626',
+                        'pancasila-darkred': '#991B1B',
+                        'pancasila-gold': '#F59E0B',
+                        'pancasila-lightgold': '#FEF3C7',
+                        'pancasila-blue': '#1E3A8A',
+                        'pancasila-sky': '#0284C7',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .section-fade {
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-scale:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen">
+
+    <!-- TOP BAR / HEADER NAV -->
+    <header class="bg-pancasila-blue text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showSection('cover')">
+                <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center border-2 border-amber-400 font-bold text-lg shadow">
+                    🇮🇩
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-bold tracking-tight leading-tight">Pendidikan Pancasila</h1>
+                    <p class="text-xs text-amber-300 font-medium">Kelas VII / Fase D • SMP/MTs</p>
+                </div>
+            </div>
+
+            <!-- Header Controls -->
+            <div class="flex items-center space-x-2">
+                <button onclick="showSection('main-menu')" class="hidden md:flex items-center space-x-2 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg text-sm font-medium transition">
+                    <i class="fas fa-th-large text-amber-400"></i>
+                    <span>Menu Utama</span>
+                </button>
+                <button onclick="toggleAudio()" id="audio-btn" class="p-2 bg-white/10 hover:bg-white/20 rounded-lg text-amber-400 text-sm font-medium transition flex items-center justify-center w-10 h-10" title="Efek Suara">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+
+        <!-- ==================== 1. COVER / HALAMAN PEMBUKA ==================== -->
+        <section id="cover" class="section-fade">
+            <div class="glass-card rounded-3xl p-6 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl border-t-8 border-pancasila-red relative overflow-hidden">
+                <!-- Decorative Elements -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-pancasila-gold/20 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-pancasila-red/20 rounded-full blur-2xl"></div>
+
+                <div class="relative z-10">
+                    <span class="inline-block px-4 py-1.5 bg-red-100 text-pancasila-red font-semibold rounded-full text-xs sm:text-sm tracking-wide uppercase mb-4 border border-red-200">
+                        Media Pembelajaran Interaktif (PMI)
+                    </span>
+                    
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">
+                        Mengenal Makna <span class="text-pancasila-red">5 Sila Pancasila</span>
+                    </h1>
+                    <p class="text-base sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Belajar Nilai Pancasila dalam Kehidupan Bermasyarakat, Berbangsa, dan Bernegara secara Seru & Interaktif!
+                    </p>
+
+                    <!-- Garuda Illustration Canvas/SVG -->
+                    <div class="my-6 flex justify-center">
+                        <div class="relative w-48 h-48 sm:w-56 sm:h-56 bg-amber-50 rounded-full flex items-center justify-center p-4 border-4 border-amber-400 shadow-inner group hover:scale-105 transition duration-300">
+                            <svg class="w-36 h-36 sm:w-44 sm:h-44 text-amber-500 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L9 7H3L6 12L3 17H9L12 22L15 17H21L18 12L21 7H15L12 2Z" fill="#F59E0B"/>
+                                <circle cx="12" cy="12" r="5" fill="#DC2626"/>
+                                <path d="M12 9L13 11H15L13.5 12.5L14 14.5L12 13.5L10 14.5L10.5 12.5L9 11H11L12 9Z" fill="#FFF"/>
+                            </svg>
+                            <div class="absolute bottom-2 bg-pancasila-blue text-white text-xs px-3 py-1 rounded-full font-bold shadow">
+                                BHINNEKA TUNGGAL IKA
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                        <button onclick="showSection('main-menu')" class="bg-pancasila-red hover:bg-pancasila-darkred text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-200 flex items-center justify-center space-x-3">
+                            <span>Mulai Belajar</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 2. MENU UTAMA ==================== -->
+        <section id="main-menu" class="hidden section-fade">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-4xl font-bold text-slate-900">Menu Utama Pembelajaran</h2>
+                <p class="text-slate-600 mt-1">Pilihlah salah satu menu di bawah ini untuk memulai eksplorasi materi</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Button 1 -->
+                <button onclick="showSection('petunjuk')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-blue-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl font-bold group-hover:bg-blue-600 group-hover:text-white transition">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 01</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition">Petunjuk Penggunaan</h3>
+                        <p class="text-xs text-slate-500 mt-1">Panduan praktis cara mengoperasikan media ini.</p>
+                    </div>
+                </button>
+
+                <!-- Button 2 -->
+                <button onclick="showSection('tujuan')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-amber-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold group-hover:bg-amber-600 group-hover:text-white transition">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 02</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition">Tujuan Pembelajaran</h3>
+                        <p class="text-xs text-slate-500 mt-1">Capaian & kompetensi yang diharapkan.</p>
+                    </div>
+                </button>
+
+                <!-- Button 3 -->
+                <button onclick="showSection('materi')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-red-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-xl font-bold group-hover:bg-red-600 group-hover:text-white transition">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 03</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">Materi Pembelajaran</h3>
+                        <p class="text-xs text-slate-500 mt-1">Eksplorasi makna & penerapan 5 Sila Pancasila.</p>
+                    </div>
+                </button>
+
+                <!-- Button 4 -->
+                <button onclick="showSection('video')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-purple-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold group-hover:bg-purple-600 group-hover:text-white transition">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 04</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-600 transition">Video Pembelajaran</h3>
+                        <p class="text-xs text-slate-500 mt-1">Tonton rangkuman audio-visual menarik.</p>
+                    </div>
+                </button>
+
+                <!-- Button 5 -->
+                <button onclick="showSection('aktivitas')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-emerald-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold group-hover:bg-emerald-600 group-hover:text-white transition">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 05</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition">Aktivitas Interaktif</h3>
+                        <p class="text-xs text-slate-500 mt-1">Permainan edukatif & latihan seru.</p>
+                    </div>
+                </button>
+
+                <!-- Button 6 -->
+                <button onclick="showSection('kuis')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-indigo-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 06</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition">Kuis Evaluasi</h3>
+                        <p class="text-xs text-slate-500 mt-1">Uji pemahamanmu dengan 10 soal evaluasi.</p>
+                    </div>
+                </button>
+
+                <!-- Button 7 -->
+                <button onclick="showSection('refleksi')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-pink-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl font-bold group-hover:bg-pink-600 group-hover:text-white transition">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 07</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-pink-600 transition">Refleksi Pembelajaran</h3>
+                        <p class="text-xs text-slate-500 mt-1">Perenungan & komitmen aksi nyata.</p>
+                    </div>
+                </button>
+
+                <!-- Button 8 -->
+                <button onclick="showSection('profil')" class="glass-card p-6 rounded-2xl hover-scale text-left border-l-4 border-slate-500 flex flex-col justify-between group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center text-xl font-bold group-hover:bg-slate-700 group-hover:text-white transition">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menu 08</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-slate-700 transition">Profil Pengembang</h3>
+                        <p class="text-xs text-slate-500 mt-1">Informasi penyusun media pembelajaran.</p>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <!-- ==================== 3. PETUNJUK PENGGUNAAN ==================== -->
+        <section id="petunjuk" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-book-open text-pancasila-gold"></i>
+                        Petunjuk Penggunaan Media
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                            <i class="fas fa-compass text-blue-500"></i> Navigasi Aplikasi
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Gunakan tombol menu di bagian atas atau tombol kembali untuk berpindah antar halaman secara mudah dan fleksibel.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                            <i class="fas fa-lightbulb text-amber-500"></i> Mempelajari Materi
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Pilih tab Sila 1 hingga Sila 5 untuk melihat penjelasan makna, penerapan di berbagai lingkungan, serta contoh perilaku sesuai dan tidak sesuai.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                            <i class="fas fa-gamepad text-emerald-500"></i> Aktivitas Interaktif
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Cobalah 4 jenis permainan edukatif yang tersedia. Kamu akan mendapat umpan balik (feedback) langsung saat menjawab.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 mb-2">
+                            <i class="fas fa-tasks text-purple-500"></i> Kuis Evaluasi
+                        </h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Jawablah 10 soal pilihan ganda secara jujur. Nilai dan predikat hasil belajar kamu akan muncul secara otomatis di akhir kuis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="showSection('tujuan')" class="bg-pancasila-blue hover:bg-blue-900 text-white font-bold px-6 py-3 rounded-xl shadow transition">
+                        Lanjut ke Tujuan Pembelajaran <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. TUJUAN PEMBELAJARAN ==================== -->
+        <section id="tujuan" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-bullseye text-pancasila-gold"></i>
+                        Tujuan Pembelajaran (CP / TP)
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl mb-6">
+                    <h3 class="font-bold text-amber-900 text-sm uppercase tracking-wide">Capaian Pembelajaran Fase D</h3>
+                    <p class="text-sm text-amber-800 mt-1">
+                        Peserta didik mampu menganalisis kronologi lahirnya Pancasila; mengkaji fungsi dan kedudukan Pancasila sebagai dasar negara dan pandangan hidup bangsa, serta mengimplementasikan nilai-nilai Pancasila dalam kehidupan sehari-hari.
+                    </p>
+                </div>
+
+                <h3 class="font-bold text-slate-900 text-lg mb-4">Target Kompetensi Murid:</h3>
+
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-red-100 text-pancasila-red font-bold flex items-center justify-center shrink-0">1</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Memahami Makna Sila-Sila Pancasila</h4>
+                            <p class="text-sm text-slate-600">Peserta didik mampu menjelaskan makna esensial yang terkandung dalam Sila 1 sampai Sila 5 Pancasila secara utuh.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-600 font-bold flex items-center justify-center shrink-0">2</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Mengidentifikasi Nilai-Nilai Pancasila</h4>
+                            <p class="text-sm text-slate-600">Peserta didik dapat membedakan contoh perilaku yang sesuai dan tidak sesuai dengan nilai-nilai Pancasila di berbagai konteks.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 text-pancasila-blue font-bold flex items-center justify-center shrink-0">3</div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Menerapkan Nilai Pancasila</h4>
+                            <p class="text-sm text-slate-600">Peserta didik mampu mengaplikasikan sikap bermoral Pancasila dalam lingkungan keluarga, sekolah, masyarakat, serta berbangsa dan bernegara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="showSection('materi')" class="bg-pancasila-red hover:bg-pancasila-darkred text-white font-bold px-6 py-3 rounded-xl shadow transition">
+                        Mulai Pelajari Materi <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. MATERI PEMBELAJARAN ==================== -->
+        <section id="materi" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-5xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-layer-group text-pancasila-gold"></i>
+                        Materi Makna 5 Sila Pancasila
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <!-- Navigation Tabs Sila -->
+                <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-200 pb-4 justify-center">
+                    <button onclick="showSilaTab(1)" id="tab-sila-1" class="sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-pancasila-red text-white shadow">
+                        ⭐ Sila 1
+                    </button>
+                    <button onclick="showSilaTab(2)" id="tab-sila-2" class="sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-slate-100 text-slate-600 hover:bg-slate-200">
+                        ⛓️ Sila 2
+                    </button>
+                    <button onclick="showSilaTab(3)" id="tab-sila-3" class="sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-slate-100 text-slate-600 hover:bg-slate-200">
+                        🌳 Sila 3
+                    </button>
+                    <button onclick="showSilaTab(4)" id="tab-sila-4" class="sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-slate-100 text-slate-600 hover:bg-slate-200">
+                        🐂 Sila 4
+                    </button>
+                    <button onclick="showSilaTab(5)" id="tab-sila-5" class="sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-slate-100 text-slate-600 hover:bg-slate-200">
+                        🌾 Sila 5
+                    </button>
+                </div>
+
+                <!-- CONTENT CONTAINERS FOR SILA -->
+                <div id="sila-content-container">
+                    <!-- Sila 1 -->
+                    <div id="content-sila-1" class="sila-content space-y-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                            <div class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center text-5xl shadow-lg border-2 border-amber-400 shrink-0">
+                                ⭐
+                            </div>
+                            <div>
+                                <span class="bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Sila Pertama</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Ketuhanan Yang Maha Esa</h3>
+                                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                                    <strong>Makna Utama:</strong> Keimanan dan ketakwaan kepada Tuhan Yang Maha Esa, menghormati perbedaan agama dan kepercayaan, serta membina toleransi yang harmonis antarumat beragama di Indonesia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Contoh Penerapan -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-home text-blue-500"></i> Lingkungan Keluarga & Sekolah
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Berdoa sebelum dan sesudah belajar/makan.</li>
+                                    <li>Menghormati teman yang sedang menjalankan ibadah.</li>
+                                    <li>Tidak memaksakan suatu agama kepada orang lain.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-globe text-emerald-500"></i> Masyarakat & Negara
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Menjaga kerukunan antarumat beragama di lingkungan sekitar.</li>
+                                    <li>Menjamin kebebasan beribadah sesuai Undang-Undang.</li>
+                                    <li>Bekerja sama dalam kegiatan sosial tanpa memandang perbedaan agama.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Perilaku Sesuai vs Tidak Sesuai -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-emerald-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-check-circle text-emerald-600"></i> Perilaku Sesuai
+                                </h4>
+                                <p class="text-xs text-emerald-900">Memberi kesempatan kepada teman untuk beribadah saat belajar kelompok berlangsung.</p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-red-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-times-circle text-red-600"></i> Perilaku Tidak Sesuai
+                                </h4>
+                                <p class="text-xs text-red-900">Mengejek atau mengganggu teman yang memiliki tata cara ibadah berbeda.</p>
+                            </div>
+                        </div>
+
+                        <!-- Refleksi Sederhana -->
+                        <div class="bg-slate-100 p-4 rounded-xl border-l-4 border-pancasila-blue">
+                            <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                                💡 <strong>Pertanyaan Refleksi Sila 1:</strong> Sudahkah kamu memberikan ketenangan bagi temanmu yang sedang beribadah di sekolah?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sila 2 -->
+                    <div id="content-sila-2" class="sila-content hidden space-y-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                            <div class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center text-5xl shadow-lg border-2 border-amber-400 shrink-0">
+                                ⛓️
+                            </div>
+                            <div>
+                                <span class="bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Sila Kedua</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Kemanusiaan yang Adil dan Beradab</h3>
+                                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                                    <strong>Makna Utama:</strong> Menghargai harkat dan martabat manusia, bersikap adil, tenggang rasa, membantu sesama yang kesulitan, serta menolak segala bentuk diskriminasi dan perundungan (bullying).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-users text-blue-500"></i> Penerapan Sehari-hari
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Menolong teman yang terjatuh atau membutuhkan bantuan.</li>
+                                    <li>Bersikap sopan dan santun kepada guru, orang tua, dan sesama.</li>
+                                    <li>Menggalang bantuan untuk korban bencana alam.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-balance-scale text-emerald-500"></i> Prinsip Keberadaban
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Memerlakukan setiap orang secara setara tanpa memandang status sosial.</li>
+                                    <li>Menjunjung tinggi hak asasi manusia (HAM).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-emerald-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-check-circle text-emerald-600"></i> Perilaku Sesuai
+                                </h4>
+                                <p class="text-xs text-emerald-900">Membela teman yang menjadi korban perundungan (bullying) dan melaporkannya ke guru.</p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-red-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-times-circle text-red-600"></i> Perilaku Tidak Sesuai
+                                </h4>
+                                <p class="text-xs text-red-900">Melakukan perundungan verbal/fisik atau bersikap acuh tak acuh saat melihat orang lain kesusahan.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-100 p-4 rounded-xl border-l-4 border-pancasila-blue">
+                            <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                                💡 <strong>Pertanyaan Refleksi Sila 2:</strong> Kapan terakhir kali kamu membantu temanmu yang sedang kesulitan belajar tanpa mengharapkan imbalan?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sila 3 -->
+                    <div id="content-sila-3" class="sila-content hidden space-y-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                            <div class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center text-5xl shadow-lg border-2 border-amber-400 shrink-0">
+                                🌳
+                            </div>
+                            <div>
+                                <span class="bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Sila Ketiga</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Persatuan Indonesia</h3>
+                                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                                    <strong>Makna Utama:</strong> Menjaga persatuan dan kesatuan bangsa, menempatkan kepentingan bangsa di atas kepentingan pribadi/golongan, mencintai tanah air, serta menghargai keberagaman suku, budaya, dan bahasa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-flag text-blue-500"></i> Penerapan di Sekolah & Masyarakat
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Mengikuti upacara bendera dengan tertib dan khidmat.</li>
+                                    <li>Berteman dengan siapa saja tanpa membeda-bedakan suku atau daerah asal.</li>
+                                    <li>Menggunakan Bahasa Indonesia yang baik dan benar.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-[#eab308] fa-shopping-bag text-amber-500"></i> Cinta Tanah Air
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Bangga menggunakan produk-produk buatan dalam negeri/Lokal.</li>
+                                    <li>Melestarikan tarian, musik, dan kebudayaan daerah Indonesia.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-emerald-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-check-circle text-emerald-600"></i> Perilaku Sesuai
+                                </h4>
+                                <p class="text-xs text-emerald-900">Bekerja sama dalam kelompok piket kelas tanpa memandang asal daerah teman.</p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-red-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-times-circle text-red-600"></i> Perilaku Tidak Sesuai
+                                </h4>
+                                <p class="text-xs text-red-900">Membuat geng/kelompok berteman yang eksklusif hanya untuk suku tertentu (Etnosentrisme).</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-100 p-4 rounded-xl border-l-4 border-pancasila-blue">
+                            <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                                💡 <strong>Pertanyaan Refleksi Sila 3:</strong> Apa produk buatan Indonesia yang paling sering kamu gunakan dalam kehidupan sehari-hari?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sila 4 -->
+                    <div id="content-sila-4" class="sila-content hidden space-y-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                            <div class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center text-5xl shadow-lg border-2 border-amber-400 shrink-0">
+                                🐂
+                            </div>
+                            <div>
+                                <span class="bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Sila Keempat</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan</h3>
+                                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                                    <strong>Makna Utama:</strong> Mengutamakan musyawarah mufakat dalam mengambil keputusan bersama, menghargai pendapat orang lain, serta menerima dan melaksanakan hasil keputusan dengan penuh tanggung jawab.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-comments text-blue-500"></i> Musyawarah di Sekolah
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Pemilihan ketua kelas secara demokratis melalui pemungutan suara/diskusi.</li>
+                                    <li>Bermusyawarah menentukan tujuan wisata studi tur sekolah.</li>
+                                    <li>Mendengarkan pendapat teman saat berdiskusi kelompok.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-handshake text-emerald-500"></i> Tanggung Jawab Keputusan
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Menerima kekalahan dalam pemilihan dengan lapang dada.</li>
+                                    <li>Melaksanakan keputusan hasil musyawarah bersama secara sungguh-sungguh.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-emerald-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-check-circle text-emerald-600"></i> Perilaku Sesuai
+                                </h4>
+                                <p class="text-xs text-emerald-900">Mendengarkan hingga selesai saat teman menyampaikan ide, meskipun kebetulan gagasannya berbeda dari gagasanmu.</p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-red-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-times-circle text-red-600"></i> Perilaku Tidak Sesuai
+                                </h4>
+                                <p class="text-xs text-red-900">Memaksa kehendak pribadi kepada anggota kelompok lain atau marah jika pendapatnya tidak diterima.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-100 p-4 rounded-xl border-l-4 border-pancasila-blue">
+                            <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                                💡 <strong>Pertanyaan Refleksi Sila 4:</strong> Apakah kamu selalu mendengarkan gagasan temanmu dengan tenang saat diskusi kelompok?
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sila 5 -->
+                    <div id="content-sila-5" class="sila-content hidden space-y-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                            <div class="w-24 h-24 bg-slate-900 rounded-2xl flex items-center justify-center text-5xl shadow-lg border-2 border-amber-400 shrink-0">
+                                🌾
+                            </div>
+                            <div>
+                                <span class="bg-amber-200 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Sila Kelima</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Keadilan Sosial bagi Seluruh Rakyat Indonesia</h3>
+                                <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+                                    <strong>Makna Utama:</strong> Bersikap adil terhadap sesama, menghormati hak orang lain, menghargai hasil karya orang lain, suka bekerja keras, hemat/tidak boros, serta bergotong royong demi kesejahteraan bersama.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-balance-scale-right text-blue-500"></i> Sikap Adil & Gotong Royong
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Membagi tugas kelompok secara adil sesuai porsi masing-masing.</li>
+                                    <li>Aktif dalam kerja bakti membersihkan lingkungan kelas atau rumah.</li>
+                                    <li>Menghormati hak-hak publik dan fasilitas umum.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-piggy-bank text-emerald-500"></i> Kerja Keras & Hemat
+                                </h4>
+                                <ul class="text-xs sm:text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                    <li>Gemar menabung dan tidak bergaya hidup mewah/pamer.</li>
+                                    <li>Bekerja keras dan tidak mudah menyerah saat belajar.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-emerald-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-check-circle text-emerald-600"></i> Perilaku Sesuai
+                                </h4>
+                                <p class="text-xs text-emerald-900">Menjaga kebersihan fasilitas umum dan menghargai lukisan/karya teman dengan memberikan pujian.</p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+                                <h4 class="font-bold text-red-800 text-sm flex items-center gap-2 mb-2">
+                                    <i class="fas fa-times-circle text-red-600"></i> Perilaku Tidak Sesuai
+                                </h4>
+                                <p class="text-xs text-red-900">Merusak fasilitas sekolah, pemborosan uang saku, atau ingin menang sendiri dalam pembagian tugas.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-100 p-4 rounded-xl border-l-4 border-pancasila-blue">
+                            <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                                💡 <strong>Pertanyaan Refleksi Sila 5:</strong> Sudahkah kamu bersikap hemat dan rajin menabung minggu ini?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. VIDEO PEMBELAJARAN ==================== -->
+        <section id="video" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-play-circle text-pancasila-red"></i>
+                        Video Pembelajaran Interaktif
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <!-- Video Frame Simulation / Responsive Embed -->
+                <div class="relative w-full aspect-video bg-slate-900 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center border-4 border-slate-800">
+                    <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/1v0pL3dK0gI?autoplay=0" title="Video Pancasila Kelas 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="mt-6 bg-blue-50 p-4 rounded-xl border border-blue-200">
+                    <h3 class="font-bold text-blue-900 text-sm flex items-center gap-2">
+                        <i class="fas fa-info-circle text-blue-600"></i> Catatan Pembelajaran Video
+                    </h3>
+                    <p class="text-xs sm:text-sm text-blue-800 mt-1">
+                        Saksikan penjelasan ilustratif di atas untuk memperdalam pemahamanmu mengenai keterkaitan 5 Sila Pancasila dalam kehidupan sehari-hari sebelum mencoba aktivitas interaktif.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. AKTIVITAS INTERAKTIF ==================== -->
+        <section id="aktivitas" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-5xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-gamepad text-emerald-500"></i>
+                        Aktivitas Pembelajaran Interaktif
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <!-- Sub-Menu Permainan -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                    <button onclick="switchGameTab('drag')" id="game-tab-drag" class="game-tab-btn bg-emerald-600 text-white p-3 rounded-xl text-xs sm:text-sm font-bold shadow text-center">
+                        🧩 Match Simbol
+                    </button>
+                    <button onclick="switchGameTab('pilih')" id="game-tab-pilih" class="game-tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 p-3 rounded-xl text-xs sm:text-sm font-bold text-center">
+                        🖼️ Pilih Perilaku
+                    </button>
+                    <button onclick="switchGameTab('tebak')" id="game-tab-tebak" class="game-tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 p-3 rounded-xl text-xs sm:text-sm font-bold text-center">
+                        🔍 Tebak Sila
+                    </button>
+                    <button onclick="switchGameTab('bs')" id="game-tab-bs" class="game-tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 p-3 rounded-xl text-xs sm:text-sm font-bold text-center">
+                        ✔️ Benar / Salah
+                    </button>
+                </div>
+
+                <!-- GAME 1: MATCHING SIMBOL DAN BUNYI -->
+                <div id="game-drag-container" class="game-box space-y-6">
+                    <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
+                        <h3 class="font-bold text-emerald-900 text-sm">Petunjuk Permainan Match Simbol:</h3>
+                        <p class="text-xs text-emerald-800 mt-1">Klik Simbol Sila di sebelah kiri, lalu klik Bunyi Sila yang cocok di sebelah kanan!</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Left Column (Simbol) -->
+                        <div class="space-y-3">
+                            <h4 class="font-bold text-slate-700 text-center text-sm">Pilih Simbol:</h4>
+                            <div onclick="selectSymbol(1, this)" class="symbol-card bg-white p-3 rounded-xl border-2 border-slate-200 hover:border-emerald-500 cursor-pointer flex items-center space-x-3 transition">
+                                <span class="text-3xl">⭐</span>
+                                <span class="font-bold text-sm text-slate-800">Bintang Emas</span>
+                            </div>
+                            <div onclick="selectSymbol(2, this)" class="symbol-card bg-white p-3 rounded-xl border-2 border-slate-200 hover:border-emerald-500 cursor-pointer flex items-center space-x-3 transition">
+                                <span class="text-3xl">⛓️</span>
+                                <span class="font-bold text-sm text-slate-800">Rantai Emas</span>
+                            </div>
+                            <div onclick="selectSymbol(3, this)" class="symbol-card bg-white p-3 rounded-xl border-2 border-slate-200 hover:border-emerald-500 cursor-pointer flex items-center space-x-3 transition">
+                                <span class="text-3xl">🌳</span>
+                                <span class="font-bold text-sm text-slate-800">Pohon Beringin</span>
+                            </div>
+                            <div onclick="selectSymbol(4, this)" class="symbol-card bg-white p-3 rounded-xl border-2 border-slate-200 hover:border-emerald-500 cursor-pointer flex items-center space-x-3 transition">
+                                <span class="text-3xl">🐂</span>
+                                <span class="font-bold text-sm text-slate-800">Kepala Banteng</span>
+                            </div>
+                            <div onclick="selectSymbol(5, this)" class="symbol-card bg-white p-3 rounded-xl border-2 border-slate-200 hover:border-emerald-500 cursor-pointer flex items-center space-x-3 transition">
+                                <span class="text-3xl">🌾</span>
+                                <span class="font-bold text-sm text-slate-800">Padi dan Kapas</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Column (Bunyi) -->
+                        <div class="space-y-3">
+                            <h4 class="font-bold text-slate-700 text-center text-sm">Pasangkan dengan Bunyi:</h4>
+                            <div onclick="matchBunyi(3, this)" class="bunyi-card bg-white p-3.5 rounded-xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer text-xs sm:text-sm text-slate-700 transition font-medium">
+                                Persatuan Indonesia
+                            </div>
+                            <div onclick="matchBunyi(1, this)" class="bunyi-card bg-white p-3.5 rounded-xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer text-xs sm:text-sm text-slate-700 transition font-medium">
+                                Ketuhanan Yang Maha Esa
+                            </div>
+                            <div onclick="matchBunyi(5, this)" class="bunyi-card bg-white p-3.5 rounded-xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer text-xs sm:text-sm text-slate-700 transition font-medium">
+                                Keadilan Sosial bagi Seluruh Rakyat Indonesia
+                            </div>
+                            <div onclick="matchBunyi(2, this)" class="bunyi-card bg-white p-3.5 rounded-xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer text-xs sm:text-sm text-slate-700 transition font-medium">
+                                Kemanusiaan yang Adil dan Beradab
+                            </div>
+                            <div onclick="matchBunyi(4, this)" class="bunyi-card bg-white p-3.5 rounded-xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer text-xs sm:text-sm text-slate-700 transition font-medium">
+                                Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="drag-feedback" class="hidden p-4 rounded-xl text-center text-sm font-bold"></div>
+                </div>
+
+                <!-- GAME 2: PILIH PERILAKU SESUAI -->
+                <div id="game-pilih-container" class="game-box hidden space-y-6">
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
+                        <h3 class="font-bold text-blue-900 text-sm">Studi Kasus Perilaku:</h3>
+                        <p class="text-xs text-blue-800 mt-1">Pilihlah gambar tindakan yang paling mencerminkan penerapan <strong>Sila Ke-3 (Persatuan Indonesia)</strong> di sekolah!</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div onclick="checkPerilaku(false, this)" class="choice-card bg-white p-4 rounded-2xl border-2 border-slate-200 hover:border-red-400 cursor-pointer text-center space-y-3 transition">
+                            <div class="text-5xl">🗣️💥</div>
+                            <h4 class="font-bold text-slate-800 text-sm">Pilihan A</h4>
+                            <p class="text-xs text-slate-600">Saling mengejek budaya daerah teman saat jam istirahat sekolah.</p>
+                        </div>
+                        <div onclick="checkPerilaku(true, this)" class="choice-card bg-white p-4 rounded-2xl border-2 border-slate-200 hover:border-emerald-400 cursor-pointer text-center space-y-3 transition">
+                            <div class="text-5xl">🤝🇮🇩</div>
+                            <h4 class="font-bold text-slate-800 text-sm">Pilihan B</h4>
+                            <p class="text-xs text-slate-600">Bekerja sama dalam tari daerah gabungan tanpa membeda-bedakan suku.</p>
+                        </div>
+                        <div onclick="checkPerilaku(false, this)" class="choice-card bg-white p-4 rounded-2xl border-2 border-slate-200 hover:border-red-400 cursor-pointer text-center space-y-3 transition">
+                            <div class="text-5xl">🙈🚫</div>
+                            <h4 class="font-bold text-slate-800 text-sm">Pilihan C</h4>
+                            <p class="text-xs text-slate-600">Hanya mau berteman dengan siswa yang berasal dari desa yang sama.</p>
+                        </div>
+                    </div>
+                    <div id="pilih-feedback" class="hidden p-4 rounded-xl text-center text-sm font-bold"></div>
+                </div>
+
+                <!-- GAME 3: TEBAK SILA -->
+                <div id="game-tebak-container" class="game-box hidden space-y-6">
+                    <div class="bg-purple-50 p-4 rounded-xl border border-purple-200">
+                        <h3 class="font-bold text-purple-900 text-sm">Skenario Situasi:</h3>
+                        <p class="text-sm text-purple-950 mt-2 italic font-medium">
+                            "Ketika pengurus OSIS mengadakan rapat untuk menentukan tema pentas seni, Budi dengan sabar mendengarkan ide dari Siti meskipun awalnya ia tidak setuju. Setelah pemungutan suara, Budi menerima hasil keputusan bersama dengan penuh rasa tanggung jawab."
+                        </p>
+                    </div>
+
+                    <h4 class="font-bold text-slate-800 text-center text-sm">Situasi di atas paling mencerminkan penerapan nilai Sila ke berapa?</h4>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                        <button onclick="checkTebak(1, this)" class="bg-white border-2 border-slate-200 hover:border-purple-500 p-3 rounded-xl font-bold text-slate-700 text-sm">Sila 1 ⭐</button>
+                        <button onclick="checkTebak(2, this)" class="bg-white border-2 border-slate-200 hover:border-purple-500 p-3 rounded-xl font-bold text-slate-700 text-sm">Sila 2 ⛓️</button>
+                        <button onclick="checkTebak(3, this)" class="bg-white border-2 border-slate-200 hover:border-purple-500 p-3 rounded-xl font-bold text-slate-700 text-sm">Sila 3 🌳</button>
+                        <button onclick="checkTebak(4, this)" class="bg-white border-2 border-slate-200 hover:border-purple-500 p-3 rounded-xl font-bold text-slate-700 text-sm">Sila 4 🐂</button>
+                        <button onclick="checkTebak(5, this)" class="bg-white border-2 border-slate-200 hover:border-purple-500 p-3 rounded-xl font-bold text-slate-700 text-sm">Sila 5 🌾</button>
+                    </div>
+                    <div id="tebak-feedback" class="hidden p-4 rounded-xl text-center text-sm font-bold"></div>
+                </div>
+
+                <!-- GAME 4: BENAR / SALAH -->
+                <div id="game-bs-container" class="game-box hidden space-y-6">
+                    <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                        <h3 class="font-bold text-amber-900 text-sm">Pernyataan Analisis Perilaku:</h3>
+                        <p class="text-base text-amber-950 mt-2 font-medium">
+                            "Membeli barang-barang mewah secara berlebihan hingga menghabiskan uang saku sekolah merupakan tindakan yang sesuai dengan nilai Keadilan Sosial Sila ke-5."
+                        </p>
+                    </div>
+
+                    <div class="flex justify-center gap-4">
+                        <button onclick="checkBS(true, this)" class="w-36 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl text-lg shadow">
+                            BENAR 👍
+                        </button>
+                        <button onclick="checkBS(false, this)" class="w-36 bg-red-500 hover:bg-red-600 text-white font-bold py-3.5 rounded-xl text-lg shadow">
+                            SALAH 👎
+                        </button>
+                    </div>
+                    <div id="bs-feedback" class="hidden p-4 rounded-xl text-center text-sm font-bold"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 8. KUIS EVALUASI ==================== -->
+        <section id="kuis" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto shadow-lg">
+                <!-- Quiz Header -->
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-pancasila-blue">Kuis Evaluasi Pembelajaran</h2>
+                        <p class="text-xs text-slate-500">Jawab 10 soal untuk menguji pemahamanmu</p>
+                    </div>
+                    <span id="quiz-progress" class="bg-pancasila-gold/20 text-pancasila-gold border border-amber-300 px-3 py-1 rounded-full text-xs font-bold">
+                        Soal 1 / 10
+                    </span>
+                </div>
+
+                <!-- Quiz Question Box -->
+                <div id="quiz-question-box" class="space-y-6">
+                    <div id="question-text" class="text-base sm:text-lg font-semibold text-slate-800 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        Loading soal...
+                    </div>
+
+                    <!-- Options -->
+                    <div id="options-container" class="space-y-3">
+                        <!-- Rendered via JS -->
+                    </div>
+
+                    <!-- Feedback Box -->
+                    <div id="quiz-feedback" class="hidden p-4 rounded-xl text-xs sm:text-sm font-medium"></div>
+
+                    <!-- Next Button -->
+                    <div class="flex justify-end pt-4">
+                        <button id="next-quiz-btn" onclick="nextQuestion()" class="hidden bg-pancasila-blue hover:bg-blue-900 text-white font-bold px-6 py-2.5 rounded-xl shadow transition">
+                            Soal Berikutnya <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Result Box (Hidden by default) -->
+                <div id="quiz-result-box" class="hidden text-center space-y-6 py-4">
+                    <div class="w-24 h-24 bg-amber-100 text-amber-500 rounded-full flex items-center justify-center text-5xl mx-auto border-4 border-amber-400 shadow">
+                        🏆
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Hasil Evaluasi Pembelajaran</h3>
+                        <p class="text-slate-600 text-sm mt-1">Berikut adalah rekapitulasi pencapaianmu:</p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3 max-w-md mx-auto">
+                        <div class="bg-slate-50 p-3 rounded-xl border">
+                            <div class="text-xs text-slate-500">Skor Akhir</div>
+                            <div id="score-val" class="text-2xl font-extrabold text-pancasila-blue">0</div>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200">
+                            <div class="text-xs text-emerald-600">Benar</div>
+                            <div id="correct-val" class="text-2xl font-extrabold text-emerald-600">0</div>
+                        </div>
+                        <div class="bg-red-50 p-3 rounded-xl border border-red-200">
+                            <div class="text-xs text-red-600">Salah</div>
+                            <div id="wrong-val" class="text-2xl font-extrabold text-red-600">0</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-4 rounded-2xl border border-amber-200 max-w-md mx-auto">
+                        <div class="text-xs uppercase font-bold text-amber-700 tracking-wider">Predikat Belajar:</div>
+                        <div id="predicate-val" class="text-xl font-extrabold text-amber-900 mt-0.5">Sangat Baik</div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+                        <button onclick="restartQuiz()" class="bg-pancasila-red hover:bg-pancasila-darkred text-white font-bold px-6 py-3 rounded-xl shadow transition flex items-center justify-center gap-2">
+                            <i class="fas fa-redo"></i> Ulangi Kuis
+                        </button>
+                        <button onclick="showSection('refleksi')" class="bg-pancasila-blue hover:bg-blue-900 text-white font-bold px-6 py-3 rounded-xl shadow transition flex items-center justify-center gap-2">
+                            Lanjut ke Refleksi <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 9. REFLEKSI PEMBELAJARAN ==================== -->
+        <section id="refleksi" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-heart text-pink-500"></i>
+                        Refleksi Pembelajaran Murid
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <p class="text-sm text-slate-600 mb-6">
+                    Luangkan waktu sejenak untuk merenungkan penerapan nilai Pancasila dalam keseharianmu. Isilah refleksi diri berikut ini:
+                </p>
+
+                <form id="reflection-form" onsubmit="saveReflection(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">1. Apa makna Pancasila bagi kehidupanmu sebagai seorang pelajar SMP?</label>
+                        <textarea required rows="2" class="w-full p-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-pancasila-blue focus:outline-none" placeholder="Tuliskan pendapatmu..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">2. Sila manakah yang paling sering kamu praktikkan sehari-hari? Berikan alasannya!</label>
+                        <textarea required rows="2" class="w-full p-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-pancasila-blue focus:outline-none" placeholder="Tuliskan pengalamanmu..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">3. Bagaimana cara konkritmu dalam menerapkan nilai Pancasila di lingkungan sekolah?</label>
+                        <textarea required rows="2" class="w-full p-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-pancasila-blue focus:outline-none" placeholder="Contoh aksi nyata di sekolah..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">4. Apa komitmen tindakan nyata yang akan kamu lakukan untuk menjaga persatuan di tengah keberagaman?</label>
+                        <textarea required rows="2" class="w-full p-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-pancasila-blue focus:outline-none" placeholder="Janji komitmen diri..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl shadow transition">
+                        Simpan & Kirim Refleksi Saya ✨
+                    </button>
+                </form>
+
+                <div id="reflection-success" class="hidden mt-6 bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-xl text-center">
+                    <p class="font-bold text-sm">🎉 Refleksi Berhasil Disimpan!</p>
+                    <p class="text-xs mt-1">Terima kasih telah berkomitmen menjadi pelajar berkarakter Pancasila!</p>
+                    <button onclick="showSection('penutup')" class="mt-4 bg-pancasila-blue text-white text-xs font-bold px-4 py-2 rounded-lg">
+                        Lanjut ke Halaman Penutup <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 10. HALAMAN PENUTUP & PROFIL ==================== -->
+        <section id="penutup" class="hidden section-fade">
+            <div class="glass-card rounded-3xl p-6 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl border-b-8 border-pancasila-blue">
+                <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 border-2 border-amber-300">
+                    🌟
+                </div>
+
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+                    Jadilah Generasi Muda Berkarakter Pancasila!
+                </h2>
+
+                <blockquote class="text-sm sm:text-lg italic text-slate-600 bg-amber-50 p-6 rounded-2xl border-l-4 border-amber-500 max-w-2xl mx-auto mb-8">
+                    "Mulailah menerapkan nilai-nilai Pancasila dari diri sendiri, keluarga, sekolah, dan lingkungan masyarakat sekitar."
+                </blockquote>
+
+                <div class="flex justify-center gap-4">
+                    <button onclick="showSection('main-menu')" class="bg-pancasila-blue hover:bg-blue-900 text-white font-bold px-8 py-3.5 rounded-xl shadow transition">
+                        <i class="fas fa-home mr-2"></i> Kembali ke Menu Utama
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFIL PENGEMBANG -->
+        <section id="profil" class="hidden section-fade">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto shadow-lg">
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <h2 class="text-2xl font-bold text-pancasila-blue flex items-center gap-3">
+                        <i class="fas fa-user-circle text-slate-600"></i>
+                        Profil Pengembang Media
+                    </h2>
+                    <button onclick="showSection('main-menu')" class="text-slate-500 hover:text-slate-800 font-medium text-sm flex items-center gap-1">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <div class="w-32 h-32 bg-slate-200 rounded-2xl flex items-center justify-center text-5xl shadow border-4 border-white shrink-0">
+                        👨‍🏫
+                    </div>
+                    <div class="space-y-2 text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-slate-900">Tim Pengembang PMI PPKn</h3>
+                        <p class="text-xs text-pancasila-red font-bold">Tim Inovasi Pembelajaran Digital SMP / Fase D</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Media pembelajaran interaktif ini dirancang khusus untuk mendukung Kurikulum Merdeka mata pelajaran Pendidikan Pancasila Kelas VII SMP/MTs guna membentuk Profil Pelajar Pancasila.
+                        </p>
+                        <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-xs">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium border">HTML5 / CSS3 / JS</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium border">Kurikulum Merdeka</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium border">Fase D SMP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-4 text-center mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 Media Pembelajaran Interaktif Pendidikan Pancasila Kelas VII SMP. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- AUDIO EFFECTS (Web Audio API Synthesizer) -->
+    <script>
+        // Web Audio Synthesizer for feedback sound effects
+        let soundEnabled = true;
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(type) {
+            if (!soundEnabled) return;
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'correct') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+                    gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.3);
+                } else if (type === 'wrong') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+                    osc.frequency.setValueAtTime(164.81, audioCtx.currentTime + 0.15); // E3
+                    gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.35);
+                } else if (type === 'click') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+                    gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.05);
+                }
+            } catch (e) {
+                console.log('Audio init error:', e);
+            }
+        }
+
+        function toggleAudio() {
+            soundEnabled = !soundEnabled;
+            const btn = document.getElementById('audio-btn');
+            if (soundEnabled) {
+                btn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                btn.classList.remove('text-slate-400');
+                btn.classList.add('text-amber-400');
+            } else {
+                btn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                btn.classList.remove('text-amber-400');
+                btn.classList.add('text-slate-400');
+            }
+        }
+
+        // NAVIGATION LOGIC
+        function showSection(sectionId) {
+            playSound('click');
+            const sections = ['cover', 'main-menu', 'petunjuk', 'tujuan', 'materi', 'video', 'aktivitas', 'kuis', 'refleksi', 'penutup', 'profil'];
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // MATERI TABS LOGIC
+        function showSilaTab(silaNum) {
+            playSound('click');
+            // Reset tab styles
+            for (let i = 1; i <= 5; i++) {
+                const tab = document.getElementById(`tab-sila-${i}`);
+                const content = document.getElementById(`content-sila-${i}`);
+                if (tab) {
+                    tab.className = 'sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-slate-100 text-slate-600 hover:bg-slate-200';
+                }
+                if (content) {
+                    content.classList.add('hidden');
+                }
+            }
+
+            // Active Tab
+            const activeTab = document.getElementById(`tab-sila-${silaNum}`);
+            const activeContent = document.getElementById(`content-sila-${silaNum}`);
+            if (activeTab) {
+                activeTab.className = 'sila-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm transition bg-pancasila-red text-white shadow';
+            }
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+            }
+        }
+
+        // GAME TABS LOGIC
+        function switchGameTab(tabName) {
+            playSound('click');
+            const gameTabs = ['drag', 'pilih', 'tebak', 'bs'];
+            gameTabs.forEach(name => {
+                const tabBtn = document.getElementById(`game-tab-${name}`);
+                const container = document.getElementById(`game-${name}-container`);
+                if (tabBtn) {
+                    tabBtn.className = 'game-tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 p-3 rounded-xl text-xs sm:text-sm font-bold text-center';
+                }
+                if (container) {
+                    container.classList.add('hidden');
+                }
+            });
+
+            const activeBtn = document.getElementById(`game-tab-${tabName}`);
+            const activeContainer = document.getElementById(`game-${tabName}-container`);
+            if (activeBtn) {
+                activeBtn.className = 'game-tab-btn bg-emerald-600 text-white p-3 rounded-xl text-xs sm:text-sm font-bold shadow text-center';
+            }
+            if (activeContainer) {
+                activeContainer.classList.remove('hidden');
+            }
+        }
+
+        // GAME 1 LOGIC (MATCHING)
+        let selectedSilaNum = null;
+        let selectedSilaElem = null;
+
+        function selectSymbol(num, elem) {
+            playSound('click');
+            document.querySelectorAll('.symbol-card').forEach(el => el.classList.remove('border-emerald-500', 'bg-emerald-50'));
+            selectedSilaNum = num;
+            selectedSilaElem = elem;
+            elem.classList.add('border-emerald-500', 'bg-emerald-50');
+        }
+
+        function matchBunyi(targetNum, elem) {
+            const feedback = document.getElementById('drag-feedback');
+            feedback.classList.remove('hidden');
+
+            if (!selectedSilaNum) {
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-amber-100 text-amber-800';
+                feedback.innerHTML = '⚠️ Silakan pilih Simbol Sila di sebelah kiri terlebih dahulu!';
+                return;
+            }
+
+            if (selectedSilaNum === targetNum) {
+                playSound('correct');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300';
+                feedback.innerHTML = '🎉 TEPAT SEKALI! Simbol dan bunyi Sila telah sesuai!';
+                elem.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900');
+            } else {
+                playSound('wrong');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-red-100 text-red-800 border border-red-300';
+                feedback.innerHTML = '❌ KURANG TEPAT. Pasangan simbol dan bunyi belum cocok. Coba lagi!';
+            }
+        }
+
+        // GAME 2 LOGIC
+        function checkPerilaku(isCorrect, elem) {
+            const feedback = document.getElementById('pilih-feedback');
+            feedback.classList.remove('hidden');
+
+            document.querySelectorAll('.choice-card').forEach(el => el.classList.remove('border-emerald-500', 'border-red-500', 'bg-emerald-50', 'bg-red-50'));
+
+            if (isCorrect) {
+                playSound('correct');
+                elem.classList.add('border-emerald-500', 'bg-emerald-50');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300';
+                feedback.innerHTML = '🎉 JAWABAN BENAR! Menjaga kerja sama tari daerah tanpa membedakan suku adalah bukti nyata Sila ke-3 (Persatuan Indonesia).';
+            } else {
+                playSound('wrong');
+                elem.classList.add('border-red-500', 'bg-red-50');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-red-100 text-red-800 border border-red-300';
+                feedback.innerHTML = '❌ KURANG TEPAT! Tindakan tersebut merusak persatuan dan bertentangan dengan nilai Sila ke-3.';
+            }
+        }
+
+        // GAME 3 LOGIC
+        function checkTebak(silaNum, elem) {
+            const feedback = document.getElementById('tebak-feedback');
+            feedback.classList.remove('hidden');
+
+            if (silaNum === 4) {
+                playSound('correct');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300';
+                feedback.innerHTML = '🎉 TEPAT! Menerima hasil keputusan musyawarah dengan lapang dada adalah cerminan utama Sila Ke-4.';
+            } else {
+                playSound('wrong');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-red-100 text-red-800 border border-red-300';
+                feedback.innerHTML = '❌ BELUM TEPAT. Sikap bermusyawarah dan menghargai pendapat merupakan inti dari Sila Ke-4.';
+            }
+        }
+
+        // GAME 4 LOGIC
+        function checkBS(userAnswer, elem) {
+            const feedback = document.getElementById('bs-feedback');
+            feedback.classList.remove('hidden');
+
+            if (userAnswer === false) {
+                playSound('correct');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300';
+                feedback.innerHTML = '🎉 JAWABAN BENAR! Membeli barang mewah secara berlebihan (hidup boros) BERTENTANGAN dengan Sila ke-5 yang mengajarkan pola hidup hemat.';
+            } else {
+                playSound('wrong');
+                feedback.className = 'p-4 rounded-xl text-center text-sm font-bold bg-red-100 text-red-800 border border-red-300';
+                feedback.innerHTML = '❌ SALAH. Sila ke-5 mengajarkan kita untuk bersikap hemat dan tidak bergaya hidup mewah berlebihan.';
+            }
+        }
+
+        // ==================== KUIS EVALUASI DATA & LOGIC ====================
+        const quizData = [
+            {
+                question: "1. Menghormati teman yang sedang menjalankan ibadah sesuai dengan keyakinannya merupakan pengamalan Pancasila Sila ke...",
+                options: ["A. Pertama", "B. Kedua", "C. Ketiga", "D. Keempat"],
+                correct: 0,
+                explanation: "Sila Pertama (Ketuhanan Yang Maha Esa) menekankan toleransi dan penghormatan antarumat beragama."
+            },
+            {
+                question: "2. Menolong korban bencana alam tanpa membeda-bedakan latar belakangnya merupakan wujud pengamalan Sila ke...",
+                options: ["A. Sila ke-1", "B. Sila ke-2", "C. Sila ke-3", "D. Sila ke-5"],
+                correct: 1,
+                explanation: "Sila Kedua (Kemanusiaan yang Adil dan Beradab) mengajarkan nilai kemanusiaan, empati, dan tolong-menolong."
+            },
+            {
+                question: "3. Bangga menggunakan produk-produk buatan dalam negeri merupakan bentuk nilai...",
+                options: ["A. Cinta Tanah Air (Sila 3)", "B. Keadilan Sosial (Sila 5)", "C. Musyawarah (Sila 4)", "D. Keagamaan (Sila 1)"],
+                correct: 0,
+                explanation: "Mencintai produk dalam negeri merupakan wujud kecintaan pada tanah air (Sila 3 Persatuan Indonesia)."
+            },
+            {
+                question: "4. Mengutamakan musyawarah mufakat dalam menyelesaikan masalah kelompok di kelas adalah penerapan Sila ke...",
+                options: ["A. Kedua", "B. Keempat", "C. Ketiga", "D. Kelima"],
+                correct: 1,
+                explanation: "Sila Keempat mengamanatkan musyawarah untuk mencapai mufakat dalam setiap pengambilan keputusan bersama."
+            },
+            {
+                question: "5. Mengembangkan sikap hemat, tidak bergaya hidup mewah, dan rajin menabung sesuai dengan nilai Pancasila Sila ke...",
+                options: ["A. 2", "B. 3", "C. 4", "D. 5"],
+                correct: 3,
+                explanation: "Sila Kelima menekankan pentingnya sikap hemat, kerja keras, dan tidak melakukan pemborosan."
+            },
+            {
+                question: "6. Perilaku berikut yang TIDAK SESUAI dengan nilai Sila Kedua Pancasila adalah...",
+                options: ["A. Membantu teman yang terjatuh", "B. Melakukan perundungan (bullying) kepada adik kelas", "C. Bersikap sopan kepada guru", "D. Menghargai hak milik orang lain"],
+                correct: 1,
+                explanation: "Perundungan (bullying) melanggar hak asasi dan merendahkan harkat martabat manusia (bertentangan Sila 2)."
+            },
+            {
+                question: "7. Simbol Pancasila yang melambangkan kemanusiaan dan ikatan antarmanusia yang bersatu adalah...",
+                options: ["A. Bintang Emas", "B. Rantai Emas", "C. Pohon Beringin", "D. Padi dan Kapas"],
+                correct: 1,
+                explanation: "Rantai Emas melambangkan hubungan antarmanusia yang saling membutuhkan dan bersatu (Sila 2)."
+            },
+            {
+                question: "8. Ketika keputusan musyawarah tidak sesuai dengan pendapat pribadimu, sikap yang benar adalah...",
+                options: ["A. Marah dan keluar dari ruangan", "B. Menerima dan melaksanakannya dengan penuh tanggung jawab", "C. Acuh tak acuh dengan hasil keputusan", "D. Menolak menjalankan tugas kelompok"],
+                correct: 1,
+                explanation: "Setiap warga negara wajib menghormati dan melaksanakan hasil keputusan musyawarah bersama."
+            },
+            {
+                question: "9. Gotong royong membersihkan lingkungan sekolah merupakan pengamalan Pancasila yang mempererat...",
+                options: ["A. Persatuan dan keadilan sosial", "B. Perselisihan antar kelas", "C. Persaingan nilai", "D. Kesenjangan sosial"],
+                correct: 0,
+                explanation: "Gotong royong mencerminkan nilai Persatuan (Sila 3) dan Keadilan Sosial (Sila 5)."
+            },
+            {
+                question: "10. Lambang Padi dan Kapas pada Sila Kelima Pancasila melambangkan...",
+                options: ["A. Kebebasan beragama", "B. Kebutuhan dasar pangan dan sandang rakyat", "C. Kekuatan tempur bangsa", "D. Musyawarah mufakat"],
+                correct: 1,
+                explanation: "Padi melambangkan pangan (makanan) dan Kapas melambangkan sandang (pakaian) sebagai syarat kemakmuran."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let correctCount = 0;
+        let wrongCount = 0;
+        let answered = false;
+
+        function loadQuestion() {
+            answered = false;
+            const q = quizData[currentQuestion];
+            document.getElementById('quiz-progress').innerText = `Soal ${currentQuestion + 1} / ${quizData.length}`;
+            document.getElementById('question-text').innerText = q.question;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.add('hidden');
+            
+            document.getElementById('next-quiz-btn').classList.add('hidden');
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-pancasila-blue bg-white text-slate-800 text-xs sm:text-sm font-medium transition shadow-sm flex items-center justify-between';
+                btn.innerHTML = `<span>${opt}</span> <i class="far fa-circle text-slate-300"></i>`;
+                btn.onclick = () => selectAnswer(idx, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(selectedIdx, btnElem) {
+            if (answered) return;
+            answered = true;
+
+            const q = quizData[currentQuestion];
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+
+            const allBtns = document.getElementById('options-container').children;
+
+            if (selectedIdx === q.correct) {
+                playSound('correct');
+                score += 10;
+                correctCount++;
+                btnElem.className = 'w-full text-left p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-900 text-xs sm:text-sm font-bold shadow-sm flex items-center justify-between';
+                btnElem.querySelector('i').className = 'fas fa-check-circle text-emerald-600';
+                
+                feedback.className = 'p-4 rounded-xl bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs sm:text-sm font-medium';
+                feedback.innerHTML = `<strong>🎉 JAWABAN BENAR!</strong><br>${q.explanation}`;
+            } else {
+                playSound('wrong');
+                wrongCount++;
+                btnElem.className = 'w-full text-left p-4 rounded-xl border-2 border-red-500 bg-red-50 text-red-900 text-xs sm:text-sm font-bold shadow-sm flex items-center justify-between';
+                btnElem.querySelector('i').className = 'fas fa-times-circle text-red-600';
+
+                // Highlight correct one
+                allBtns[q.correct].className = 'w-full text-left p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-900 text-xs sm:text-sm font-bold shadow-sm flex items-center justify-between';
+                allBtns[q.correct].querySelector('i').className = 'fas fa-check-circle text-emerald-600';
+
+                feedback.className = 'p-4 rounded-xl bg-red-100 text-red-900 border border-red-300 text-xs sm:text-sm font-medium';
+                feedback.innerHTML = `<strong>❌ JAWABAN KURANG TEPAT!</strong><br>${q.explanation}`;
+            }
+
+            // Disable all buttons
+            for (let b of allBtns) {
+                b.disabled = true;
+            }
+
+            document.getElementById('next-quiz-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            playSound('click');
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-question-box').classList.add('hidden');
+            document.getElementById('quiz-result-box').classList.remove('hidden');
+
+            document.getElementById('score-val').innerText = score;
+            document.getElementById('correct-val').innerText = correctCount;
+            document.getElementById('wrong-val').innerText = wrongCount;
+
+            let predicate = "";
+            if (score >= 90) {
+                predicate = "🌟 SANGAT BAIK (Sangat Paham Nilai Pancasila)";
+                if (typeof confetti === 'function') confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            } else if (score >= 70) {
+                predicate = "👍 BAIK (Paham Makna Sila Pancasila)";
+            } else if (score >= 50) {
+                predicate = "📘 CUKUP (Perlu Belajar Kembali)";
+            } else {
+                predicate = "⚠️ PERLU BANTUAN (Pelajari Lagi Materi)";
+            }
+            document.getElementById('predicate-val').innerText = predicate;
+        }
+
+        function restartQuiz() {
+            playSound('click');
+            currentQuestion = 0;
+            score = 0;
+            correctCount = 0;
+            wrongCount = 0;
+            document.getElementById('quiz-result-box').classList.add('hidden');
+            document.getElementById('quiz-question-box').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        // REFLECTION FORM LOGIC
+        function saveReflection(e) {
+            e.preventDefault();
+            playSound('correct');
+            document.getElementById('reflection-form').classList.add('hidden');
+            document.getElementById('reflection-success').classList.remove('hidden');
+        }
+
+        // INIT ON LOAD
+        window.onload = function() {
+            loadQuestion();
+        };
+    </script>
+</body>
+</html>
